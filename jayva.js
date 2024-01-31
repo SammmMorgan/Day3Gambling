@@ -127,7 +127,9 @@ const players = [
 function draftTeams() {
 
     players.forEach(teamOneMember => teamOneMember.teamNumber = Math.floor(Math.random() * 2))
-    console.log(players);
+    // console.log(players);
+    teamReadout()
+    teamReadoutButBlue()
 
 }
 
@@ -140,4 +142,14 @@ function teamReadout() {
 
     const redTeamReadout = document.getElementById('redTeamReadout')
     redTeamReadout.innerText = redTeam
+}
+function teamReadoutButBlue() {
+    let blueTeam = ''
+
+    const blueTeamMembers = players.filter(blueGuy => blueGuy.teamNumber == 1)
+
+    blueTeamMembers.forEach(blueMember => blueTeam += blueMember.emoji)
+
+    const blueTeamReadout = document.getElementById('blueTeamReadout')
+    blueTeamReadout.innerText = blueTeam
 }
