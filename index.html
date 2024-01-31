@@ -17,13 +17,13 @@
         <h1 class="text-center">
             100% Legitimate Baccarat Gambling Den
         </h1>
-        <button onclick="draftTeams()" type="button" class="btn btn-success text-end fs-3"> Draft Teams </button>
+        <button onclick="draftTeams()" type="button" class="btn btn-success text-center fs-3"> Draft Teams </button>
     </header>
 
     <main>
         <div class="container">
             <section class="row">
-                <div class="col6">
+                <div class="col-6">
                     <div class="card text-white bg-danger">
                         <div class="card-body">
                             <h4 id="redTeamReadout" class="card-title"> 0</h4>
@@ -32,7 +32,7 @@
                     </div>
 
                 </div>
-                <div class="col6">
+                <div class="col-6">
                     <div class="card text-white bg-primary">
                         <div class="card-body">
                             <h4 id="blueTeamReadout" class="card-title"> 0</h4>
@@ -43,9 +43,19 @@
                 </div>
             </section>
             <section class="row">
-                <div class="col-6">
+                <div class="col-6 d-flex justify-content-between">
+                    <button class="btn btn-black" onclick="redMoneyBet(5)" type="button"> Bet 5 </button>
+                    <button class="btn btn-black" onclick="redMoneyBet(10)" type="button"> Bet 10 </button>
+                    <button class="btn btn-black" onclick="redMoneyBet(100)" type="button"> Bet 100 </button>
+                    <button class="btn btn-black" onclick="redMoneyBet(1000)" type="button"> Bet 1000 </button>
                 </div>
-                <div class="col-6"></div>
+
+                <div class="col-6 d-flex justify-content-between">
+                    <button class="btn btn-black" onclick="blueMoneyBet(5)" type="button"> Bet 5 </button>
+                    <button class="btn btn-black" onclick="blueMoneyBet(10)" type="button"> Bet 10 </button>
+                    <button class="btn btn-black" onclick="blueMoneyBet(100)" type="button"> Bet 100 </button>
+                    <button class="btn btn-black" onclick="blueMoneyBet(1000)" type="button"> Bet 1000 </button>
+                </div>
             </section>
         </div>
     </main>

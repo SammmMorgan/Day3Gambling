@@ -153,3 +153,27 @@ function teamReadoutButBlue() {
     const blueTeamReadout = document.getElementById('blueTeamReadout')
     blueTeamReadout.innerText = blueTeam
 }
+
+function redTeamSkillValue() {
+
+    let totalSkill = 0
+
+    const redTeamMembers = players.filter(redGuy => redGuy.teamNumber == 0)
+
+    redTeamMembers.forEach(skillValue => totalSkill += skillValue.skill)
+    // console.log(`${totalSkill}`);
+}
+function blueTeamSKillValue() {
+
+    let totalSkill = 0
+
+    const blueTeamMembers = players.filter(blueGuy => blueGuy.teamNumber == 1)
+
+    blueTeamMembers.forEach(skillValue => totalSkill += skillValue.skill)
+    // console.log(`${totalSkill}`);
+}
+
+function
+
+
+
