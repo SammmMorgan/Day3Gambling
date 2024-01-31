@@ -156,24 +156,45 @@ function teamReadoutButBlue() {
 
 function redTeamSkillValue() {
 
-    let totalSkill = 0
+    let totalSkillRed = 0
 
     const redTeamMembers = players.filter(redGuy => redGuy.teamNumber == 0)
 
     redTeamMembers.forEach(skillValue => totalSkill += skillValue.skill)
     // console.log(`${totalSkill}`);
+    return totalSkillRed
 }
 function blueTeamSKillValue() {
 
-    let totalSkill = 0
+    let totalSkillBlue = 0
 
     const blueTeamMembers = players.filter(blueGuy => blueGuy.teamNumber == 1)
 
     blueTeamMembers.forEach(skillValue => totalSkill += skillValue.skill)
     // console.log(`${totalSkill}`);
+    return totalSkillBlue
 }
 
-function
+const bet = {
+    team: '',
+    value: 0
+}
 
+function bettingTotal(betValue, redorblue) {
+
+    bet.value = betValue
+    bet.team = redorblue
+
+
+    console.log(`${bet.team} ${bet.value}`)
+}
+
+function teamBattle() {
+    const teamBlueSkillTotal = blueTeamSkillValue()
+    const redTeamSkillTotal = redTeamSkillValue()
+
+    // if (teamBlueSkillTotal > redTeamSkillTotal)
+
+}
 
 
