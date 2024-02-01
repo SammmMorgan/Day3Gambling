@@ -44,17 +44,21 @@
             </section>
             <section class="row">
                 <div class="col-6 d-flex justify-content-between">
-                    <button class="btn btn-black" onclick="redMoneyBet(5)" type="button"> Bet 5 </button>
-                    <button class="btn btn-black" onclick="redMoneyBet(10)" type="button"> Bet 10 </button>
-                    <button class="btn btn-black" onclick="redMoneyBet(100, 'red')" type="button"> Bet 100 </button>
-                    <button class="btn btn-black" onclick="redMoneyBet(1000, 'red')" type="button"> Bet 1000 </button>
+                    <button class="btn btn-black" onclick="bettingTotal(5, 'red')" type="button"> Bet 5 </button>
+                    <button class="btn btn-black" onclick="bettingTotal(10, 'red')" type="button"> Bet 10 </button>
+                    <button class="btn btn-black" onclick="bettingTotal(100, 'red')" type="button"> Bet 100 </button>
+                    <button class="btn btn-black" onclick="bettingTotal(1000, 'red')" type="button"> Bet 1000 </button>
                 </div>
 
                 <div class="col-6 d-flex justify-content-between">
-                    <button class="btn btn-black" onclick="blueMoneyBet(5)" type="button"> Bet 5 </button>
-                    <button class="btn btn-black" onclick="blueMoneyBet(10)" type="button"> Bet 10 </button>
-                    <button class="btn btn-black" onclick="blueMoneyBet(100)" type="button"> Bet 100 </button>
-                    <button class="btn btn-black" onclick="blueMoneyBet(1000)" type="button"> Bet 1000 </button>
+                    <button class="btn btn-black" onclick="bettingTotal(5, 'blue')" type="button"> Bet 5 </button>
+                    <button class="btn btn-black" onclick="bettingTotal(10, 'blue')" type="button"> Bet 10 </button>
+                    <button class="btn btn-black" onclick="bettingTotal(100, 'blue')" type="button"> Bet 100 </button>
+                    <button class="btn btn-black" onclick="bettingTotal(1000, 'blue')" type="button"> Bet 1000 </button>
+                </div>
+                <div class="col-12 mx-3 text-center">
+                    <p id="betActiveReadout">Current Bet: </p>
+                    <p id="teamBetActiveReadout">Team: </p>
                 </div>
             </section>
         </div>

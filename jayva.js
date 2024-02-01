@@ -160,7 +160,7 @@ function redTeamSkillValue() {
 
     const redTeamMembers = players.filter(redGuy => redGuy.teamNumber == 0)
 
-    redTeamMembers.forEach(skillValue => totalSkill += skillValue.skill)
+    redTeamMembers.forEach(skillValue => totalSkillRed += skillValue.skill)
     // console.log(`${totalSkill}`);
     return totalSkillRed
 }
@@ -170,7 +170,7 @@ function blueTeamSKillValue() {
 
     const blueTeamMembers = players.filter(blueGuy => blueGuy.teamNumber == 1)
 
-    blueTeamMembers.forEach(skillValue => totalSkill += skillValue.skill)
+    blueTeamMembers.forEach(skillValue => totalSkillBlue += skillValue.skill)
     // console.log(`${totalSkill}`);
     return totalSkillBlue
 }
@@ -185,16 +185,44 @@ function bettingTotal(betValue, redorblue) {
     bet.value = betValue
     bet.team = redorblue
 
+    const betReadout = document.getElementById('betActiveReadout')
+    betReadout.innerHTML = Current Bet: bet.value
+
+    const teamReadout = document.getElementById('teamBetActiveReadout')
+    teamReadout.innerHTML = Team: bet.team
 
     console.log(`${bet.team} ${bet.value}`)
 }
 
 function teamBattle() {
-    const teamBlueSkillTotal = blueTeamSkillValue()
+    blueTeamSKillValue()
+    redTeamSkillValue()
+    const teamBlueSkillTotal = blueTeamSKillValue()
     const redTeamSkillTotal = redTeamSkillValue()
 
-    // if (teamBlueSkillTotal > redTeamSkillTotal)
+    if (teamBlueSkillTotal > redTeamSkillTotal) {
+        if (bet.team == 'blue') {
+            bank + bet.value
+            window.alert('Hurray, Blue Team Won!', `You made: ${bet.value}`)
+        }
+        else {
+            bank - bet.value
+            window.alert('Aw man, looks like Blue Team won.', `You lost: ${bet.value}`)
+        }
+    }
+    else {
+        if (bet.team == 'red') {
+            bank + bet.value
+            window.alert('Hurray, Red Team Won!', `You made: ${bet.value}`)
+        }
+        else {
+            bank - bet.value
+            window.alert('Aw man, looks like Red Team won.', `You lost: ${bet.value}`)
+        }
+
+    }
+
+
 
 }
-
 
